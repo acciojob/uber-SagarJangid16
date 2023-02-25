@@ -1,4 +1,4 @@
-package com.driver.services;
+package com.driver.repository.services;
 
 import com.driver.model.Driver;
 

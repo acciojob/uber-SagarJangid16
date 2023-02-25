@@ -1,9 +1,8 @@
 package com.driver.controllers;
 
 import com.driver.model.Customer;
+
 import com.driver.model.TripBooking;
-import com.driver.services.CustomerService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -11,6 +10,8 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/customer")
 public class CustomerController {
+	private TripBooking bookedTrip;
+
 	@PostMapping("/register")
 	public ResponseEntity<Void> registerCustomer(@RequestBody Customer customer){
 		return new ResponseEntity<>(HttpStatus.OK);
